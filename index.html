@@ -3,81 +3,49 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>mi proyecto final</title>
+    <title>Mi Proyecto Final</title>
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-<main class="app">
-<!--hola teacher se que va a pasar por aqui, es un proyecto simple, aunque tambien inicie un ecomerce, pero ese si mejor lo dejamos para el otro año, aunque creo que con tres semanas y presion de alguien sobre mi lo terminaria en dos-->
-<!--esta parte es la que le permitira escribir el nombre del usuario, este mensaje es a manera de hacer mas amigable la pagina-->
-<section class="greeting">
+    <main class="app">
 
-<h2 class="title">
-    que ondas, <input type="text" id="name" placeholder="escribe tu nombre">
-</h2>
+        <!-- Sección de saludo al usuario -->
+        <section class="greeting">
+            <h2 class="title">¿Qué ondas, <input type="text" id="name" placeholder="Escribe tu nombre" ></h2>
+        </section>
 
-</section>
+        <!-- Sección para crear nuevas tareas -->
+        <section class="create-todo">
+            <h3>Agregar Tarea</h3>
+            <form id="new-todo-form">
+                <h4>¿Qué tienes por hacer?</h4>
+                <input type="text" name="content" id="taskInput" placeholder="Escribe tu tarea" />
 
-<!--esta parte es la que te permitira escribir las tareas que tienes que hacer-->
+                <h4>¿De dónde viene tu tarea?</h4>
+                <div class="options">
+                    <label>
+                        <input type="radio" name="categoria" id="categoria1" value="clases">
+                        <span class="bubble clases"></span>
+                        <div>Escuela</div>
+                    </label>
 
-<section class="create_todo">
-<h3>agregar tarea</h3>
-<form id="new-todo-form">
-    <h4>¿qué tienes por hacer?</h4>
-    <input type="text"  
-           name="content" 
-           id="content"  
-           placeholder="escribe tu tarea"/>
+                    <label>
+                        <input type="radio" name="categoria" id="categoria2" value="personal">
+                        <span class="bubble personal"></span>
+                        <div>Personal</div>
+                    </label>
+                </div>
 
-           <h4>¿de donde viene tu tarea?</h4>
-           <div class="opciones">
+                <input type="button" value="Agregar Tarea" id="addTaskBtn">
+            </form>
 
-             <label>
-                <input
-                       type="radio" 
-                       nam="categoria"
-                       id="categoria1"
-                       value="clases">
-                <span class="burbuja de clases"></span>       
-        <div>ESCUELA</div>
-             </label>
+            <h3>TO DO LIST</h3>
+            <div class="list" id="taskList"></div>
+        </section>
 
-             <label>
-                <input
-                       type="radio" 
-                       nam="categoria"
-                       id="categoria2"
-                       value="personal">
+    </main>
 
-                <span class="burbuja personal"></span>       
-        <div>personal</div>
-             </label>
-           </div>
-
-      <input type="submit" value="agregar tarea">     
-<h3>TO DO LIST</h3>
-    <div class="list" id="todo-list">
-       <div class="todo-item">
-          <label">
-              <input type="checkbox">
-              <span class="burbuja clases"></span>
-          </label>
-               <div class="todo-content">
-                    <input type="text" value="make a video" readonly>
-               </div>
-                    <div class="acciones">
-                        <button class="edit">edit</button>
-                        <button class="delete">delete</button>
-                    </div>
-       </div>
-    </div>
-</form>
-</section>
-
-
-
-</main>
-
-    <link rel="stylesheet" href="script.js">
+    <!-- Vinculando el archivo JavaScript -->
+    <script src="script.js"></script>
 </body>
 </html>
