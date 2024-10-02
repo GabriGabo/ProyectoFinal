@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mi Proyecto Final</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <main class="app">
+
+        <!-- Sección de saludo al usuario -->
+        <section class="greeting">
+            <h2 class="title">¿Qué ondas, <input type="text" id="name" placeholder="Escribe tu nombre" ></h2>
+        </section>
+
+        <!-- Sección para crear nuevas tareas -->
+        <section class="create-todo">
+            <h3>Agregar Tarea</h3>
+            <form id="new-todo-form">
+                <h4>¿Qué tienes por hacer?</h4>
+                <input type="text" name="content" id="taskInput" placeholder="Escribe tu tarea" />
+
+                <h4>¿De dónde viene tu tarea?</h4>
+                <div class="options">
+                    <label>
+                        <input type="radio" name="categoria" id="categoria1" value="clases">
+                        <span class="bubble clases"></span>
+                        <div>Escuela</div>
+                    </label>
+
+                    <label>
+                        <input type="radio" name="categoria" id="categoria2" value="personal">
+                        <span class="bubble personal"></span>
+                        <div>Personal</div>
+                    </label>
+                </div>
+
+                <input type="button" value="Agregar Tarea" id="addTaskBtn">
+            </form>
+
+            <h3>TO DO LIST</h3>
+            <div class="list" id="taskList"></div>
+        </section>
+
+    </main>
+
+    <!-- Vinculando el archivo JavaScript -->
+    <script src="script.js"></script>
+</body>
+</html>
